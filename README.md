@@ -6,72 +6,94 @@
 ```y
 print("PROGRAM MENGHITUNG LUAS")
 print("="*40)
-#MENU
-def menu():
-    print ("Menu Pilihan")
+
+def program() :
+    print("a. persegi panjang")
+    print("b. segituga")
+    print("c. lingkaran")
     print("\n")
-    print("1. Persegi Panjang")
-    print("2. Segitiga")
-    print("3. Lingkaran")
+    pilihan=str(input("Masukan Bangun Datar Yang Dipilih : "))
 
-def persegipanjang ():
-    print ("Menghitung Luas Persegi Panjang")
-    p = int(input("Masukkan Panjang : "))
-    l = int(input("Masukkan Lebar : "))
-    luas = p*l
-    print(f"Luas Persegi Panjang : {luas}")
-    print("\n")
-    print("Mau coba lagi [Y/N] ? ")
-    back =input().upper()
-    if back == "Y":
-        menu()
-    else:
-        exit()
-
-def segitiga ():
-    print ("Menghitung Luas Segitiga")
-    a = int(input("Masukkan Alas : "))
-    t = int(input("Masukkan Tinggi : "))
-    luas = a*t
-    print(f"Luas Segitiga : {luas}")
-    print("\n")
-    print("Mau coba lagi [Y/N] ? ")
-    back =input().upper()
-    if back == "Y":
-        menu()
-    else:
-        exit()
-
-def Lingkaran ():
-    print ("Menghitung Luas Lingkaran")
-    r = int(input("Masukkan Jari jari : ")) 
-    luas = 3.14*(r*r) 
-    print(f"Luas Lingkaran : {luas}")
-    print("\n")
-    print("Mau coba lagi [Y/N] ? ")
-    back =input().upper()
-    if back == "Y":
-        menu()
-    else:
-        exit()
-
-menu() 
-while True:
-    pilih = int(input("Masukkan Pilihan : "))
-    if pilih != 1 and pilih != 2 and pilih != 3:
-        print("Tak ada dalam Menu")
-        continue
-
-    if pilih == 1:
-        persegipanjang()
-    elif pilih == 2:
-        segitiga()
-    elif pilih == 3:
-        Lingkaran()
-        print("="*50)
-        break
+    if pilihan == "persegi panjang" :
+        p=int(input("Masukan Panjang : "))
+        l=int(input("Masukan Lebar : "))
+        hasil=p*l
+        print(f"Maka luas persegi panjang : {hasil}")
+    elif pilihan == "segitiga" :
+        a=int(input("Masukan alas segitiga : "))
+        t=int(input("Masukan tinggi segitiga : "))
+        hasil=0.5*a*t
+        print(f"Maka luas segitia: {hasil}")
+    elif pilihan=="lingkaran":
+        r=int(input("Masukan jari jari lingkaran : "))
+        phi=22/7
+        hasil= phi*r*r
+        print(f"Maka luas lingkaran : {hasil}")
+    else :
+        print("Masukan bangun datar sesuai data ")
+program()
 
  ```
- ![image](https://user-images.githubusercontent.com/93015185/142630760-0f5ea9d0-ee7a-41f4-8f54-a08ae6294fb2.png)
- 
-2. 
+![image](https://user-images.githubusercontent.com/93015185/142637239-1a97ea77-76ef-46e8-b5ee-18823931d2eb.png)
+
+2. MODIF NOMOR 1/PENYIMPANAN DALAM SATU FILE
+
+a. persegi panjang
+```y
+print("PROGRAM MENGHITUNG LUAS PERSEGI PANJANG")
+print("="*40)
+
+def persegi_panjang() :
+    p=int(input("Masukan Panjang  : "))
+    l=int(input("Masukan Lebar    : "))
+    luas=p*l
+    print(f"Maka Luas Persegi Panjang : {luas}")
+
+persegi_panjang()
+```
+![image](https://user-images.githubusercontent.com/93015185/142637580-3034bb21-1d78-4fa3-933d-434a717904de.png)
+
+b. segitiga
+```y
+print("PROGRAM MENGHITUNG LUAS SEGITIGA")
+print("="*40)
+
+def segitiga():
+    a=int(input("Masukan alas segitiga   : "))
+    t=int(input("Masukan tinggi segitiga : "))
+    luas=0.5*a*t
+    print(f"Maka Luas Segitiga : {luas}")
+    
+segitiga()
+```
+![image](https://user-images.githubusercontent.com/93015185/142637797-fe879706-eeae-4773-8498-591c28a5191d.png)
+
+c. lingkaran
+```y
+print("PROGRAM MENGHITUNG LUAS LINGKARAN")
+print("="*40)
+
+def lingkaran():
+    r=int(input("Masukan Jari Jari Lingkaran : "))
+    phi=22/7
+    luas=phi*r*r
+    print(f"Maka Luas Lingkaran : {luas}")
+    
+lingkaran()
+```
+![image](https://user-images.githubusercontent.com/93015185/142637958-8213f293-7e2c-4164-b2bb-e0d69f62296b.png)
+
+3. MENGHITUNG LUAS SEGITIGA MENGGUNAKAN FUNGSI LUAS_SEGITIGA(ALAS,TINGGI)
+
+```y
+print("PROGRAM MENGHITUNG LUAS DENGAN FUNGSI")
+print("="*40)
+
+def segitiga(alas,tinggi) :
+    luas_segitiga = alas*tinggi 
+    print("="*25)
+    print(f"Maka luas segitiga : {luas_segitiga} ")
+    print("="*25)
+segitiga(7,20)
+```
+![image](https://user-images.githubusercontent.com/93015185/142638331-2ef37013-6426-4c47-a356-bfc8df5f0337.png)
