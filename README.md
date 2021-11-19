@@ -89,11 +89,45 @@ lingkaran()
 print("PROGRAM MENGHITUNG LUAS DENGAN FUNGSI")
 print("="*40)
 
-def segitiga(alas,tinggi) :
-    luas_segitiga = alas*tinggi 
-    print("="*25)
-    print(f"Maka luas segitiga : {luas_segitiga} ")
-    print("="*25)
-segitiga(7,20)
+def segitiga(alas,tinggi):
+    return (0.5 * (alas * tinggi))
+
+alas = int(input("masukan alas :"))
+tinggi = int(input("masuk tinggi :"))
+luas = segitiga(alas,tinggi)
+print("Luas Segitiga adalah :",luas)
 ```
-![image](https://user-images.githubusercontent.com/93015185/142638331-2ef37013-6426-4c47-a356-bfc8df5f0337.png)
+![image](https://user-images.githubusercontent.com/93015185/142649670-4cae6b32-5093-4e31-a238-e6e6a2f39c4e.png)
+
+4. MENGHITUNG SEKELOMPOK DATA YG DITAMPUNG DALAM SEBUAH LIST UNTUK MENCARI NILAI TERTINGGI
+
+```y
+print("""MENGHITUNG SEKELOMPOK DATA YG DITAMPUNG 
+DALAM SEBUAH LIST UNTUK MENCARI NILAI TERTINGGI""")
+print("="*40)
+
+def proses(deret_bilangan):
+    nilai_terbesar = deret_bilangan[0]
+
+    for nilai in deret_bilangan:
+        if nilai > nilai_terbesar:
+            nilai_terbesar = nilai
+
+    return nilai_terbesar
+ 
+def cetakhasil(hasil):
+    print("bilangan terbesar adalah :",proses(hasil))       
+
+def inputdata():
+    bilangan = []
+    n = int(input("masukan banyak data :"))
+    for i in range(n):
+        masukandata = float(input("masukan bilangan :"))
+        bilangan.append(masukandata)
+    cetakhasil(bilangan)
+    
+inputdata()
+```
+![image](https://user-images.githubusercontent.com/93015185/142651362-870f468b-37ba-4e03-9104-076bc400d886.png)
+
+5. 
