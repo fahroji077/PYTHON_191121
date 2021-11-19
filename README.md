@@ -131,3 +131,18 @@ inputdata()
 ![image](https://user-images.githubusercontent.com/93015185/142651362-870f468b-37ba-4e03-9104-076bc400d886.png)
 
 5. 
+
+6. MENGHITUNG FAKTORIAL DENGAN BILANGAN(INPUT) MENGGUNAKAN FUNGSI
+
+```y
+def faktorial(n):
+    if n > 2:
+        return n * faktorial(n - 1)
+    
+    return 2
+
+bilangan = int(input("bilangan :"))
+faktor = faktorial(bilangan)
+print(f'{bilangan}! = {faktor}')
+```
+![image](https://user-images.githubusercontent.com/93015185/142656990-09f54213-a30d-4a43-b2a7-8b7606c497d5.png)
