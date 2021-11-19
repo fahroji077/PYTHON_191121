@@ -72,6 +72,6 @@ while True:
         break
 
  ```
- ![Uploading image.png…]()
+ ![image](https://user-images.githubusercontent.com/93015185/142630760-0f5ea9d0-ee7a-41f4-8f54-a08ae6294fb2.png)
  
 2. 
